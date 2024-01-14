@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-app-service
+  name: app-rollingupdate-pure
 spec:
   type: LoadBalancer
   selector:
-    app: my-hello-app
+    app: app-rollingupdate
   ports:
-    - port: 8089
+    - port: 8098
       targetPort: 8080
