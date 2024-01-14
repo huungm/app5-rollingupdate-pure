@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-app-deployment
+  name: deployment-rollingupdate
 spec:
   selector:
     matchLabels:
-      app: my-hello-app
+      app: app-rollingupdate
   replicas: 5
   strategy:
     type: RollingUpdate
@@ -15,7 +15,7 @@ spec:
   template:
     metadata:
       labels:
-        app: my-hello-app
+        app: app-rollingupdate
     spec:
       containers:
         - name: hello-app
